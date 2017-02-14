@@ -10,7 +10,7 @@ directory = 'Records';
 
 max_time = input('Enter time length: ') + 1; % extra 1 is time 0; since matlab starts matrices at 1
 
-ATM_fnc = @(x) 0.0429 + 45.4628.*x - 62.0548.*x.^2 + 30.6344.*x.^3; % derived in ATM_IR.m
+ATM_fnc = @(x) (0.0429 + 45.4628.*x - 62.0548.*x.^2 + 30.6344.*x.^3)/100; % derived in ATM_IR.m
 initial_atm = ATM_fnc(input('Enter ionizing radiation in Gy: '));
 
 % concentration vector
