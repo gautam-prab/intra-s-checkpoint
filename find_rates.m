@@ -1,9 +1,8 @@
 function [rates] = find_rates(concentrations)
-   
     rates = zeros(1,8);
     
     rates(Constants.ATM) = -1*Constants.k_signal_deg*concentrations(Constants.ATM);
-    rates(Constants.ATR) = -1*Constants.k_signal_deg*concentrations(Constants.ATR);
+    rates(Constants.ATR) = -1*Constants.k_signal_deg*concentrations(Constants.ATR) + Constants.k8*concentrations(Constants.ATM);
     
     rates(Constants.CHK2P) = Constants.k1*concentrations(Constants.CHK2)*concentrations(Constants.ATM) - Constants.k2*concentrations(Constants.CHK2P);
     rates(Constants.CHK2) = Constants.k2*concentrations(Constants.CHK2P) - Constants.k1*concentrations(Constants.CHK2)*concentrations(Constants.ATM);

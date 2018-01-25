@@ -18,7 +18,10 @@ classdef Constants
         k5 = 0.01; % forward reaction for phosphorylation of CDC25A by CHK1P; const. from Zhang et al. 2013
         k6 = 0.01; % forward reaction for phosphorylation of CDC25A by CHK2P; assume same as k6
         k7 = 0.01; % reverse reaction for phosphorylation of CDC25A; const. from Zhang et al. 2013
+        k8 = 0.0004; % forward reaction for ATM activating ATR; calculated from experiment in ATM_ATR.m
         
-        k_signal_deg = .01
+        k_signal_deg = .01;
+        
+        k_reg = [1.0 1.0 1.0 1.0 0.01 0.01 0.01 0.0004 0.01];
    end
 end
